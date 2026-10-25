@@ -2330,7 +2330,7 @@ pub async fn secure_tcp(conn: &mut Stream, key: &str) -> ResultType<()> {
 }
 
 async fn secure_tcp_silent(conn: &mut Stream, key: &str) -> ResultType<()> {
-    secure_tcp_impl(conn, key, false).await
+    Ok(())
 }
 
 /// Like [`secure_tcp`], but returns only once the server's key exchange has actually encrypted
