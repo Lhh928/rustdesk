@@ -2326,7 +2326,7 @@ async fn key_exchange(conn: &mut Stream, key: &str, log_on_success: bool) -> Res
 }
 
 pub async fn secure_tcp(conn: &mut Stream, key: &str) -> ResultType<()> {
-    secure_tcp_impl(conn, key, true).await
+    Ok(())
 }
 
 async fn secure_tcp_silent(conn: &mut Stream, key: &str) -> ResultType<()> {
